@@ -13,6 +13,11 @@ import { PastTrainingsComponent } from './training/past-trainings/past-trainings
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { NewTrainingComponent } from './training/new-training/new-training.component';
+import { StopTraningComponent } from './training/current-training/stop-training.component';
+import { AuthService } from './auth/auth.service';
 
 
 @NgModule({
@@ -24,6 +29,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CurrentTrainingComponent,
     PastTrainingsComponent,
     WelcomeComponent,
+    HeaderComponent,
+    SidenavListComponent,
+    NewTrainingComponent,
+    StopTraningComponent,
     
   ],
   imports: [
@@ -35,9 +44,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    
 
   ],
-  providers: [],
+  providers: [ AuthService ],
   bootstrap: [AppComponent]
+
+
 })
 export class AppModule { }

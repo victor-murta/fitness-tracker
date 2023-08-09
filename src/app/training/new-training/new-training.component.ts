@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-training',
-  templateUrl: './training.component.html',
-  styleUrls: ['./training.component.css']
+  selector: 'app-new-training',
+  templateUrl: './new-training.component.html',
+  styleUrls: ['./new-training.component.css']
 })
-export class TrainingComponent {
+export class NewTrainingComponent {
+
   @Output() trainingStart = new EventEmitter<void>();
 
   onGoingTraining = false;
